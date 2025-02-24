@@ -10,4 +10,4 @@
 - [ ] Add experiment layout and page(s)
 - [ ] Add lab tweaks for user interaction
 - [ ] Add site navigation
-- [ ] Add code sandboxes
+- [ ] Add code sandboxes (https://github.com/patriciogonzalezvivo/glslEditor)
