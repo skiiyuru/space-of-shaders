@@ -16,8 +16,9 @@ export default function Experience() {
         makeDefault
       />
 
-      <ambientLight intensity={2.5} />
-      <directionalLight position={[0, 0, 5]} intensity={3} />
+      <ambientLight intensity={0.01} />
+      {/* <directionalLight position={[0, 0, 5]} intensity={2} /> */}
+      <pointLight castShadow args={['white', 50, 100]} position={[7, 7, 7]} />
 
       <Provider />
     </Canvas>

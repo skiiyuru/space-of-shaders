@@ -79,7 +79,7 @@ export default function Character({ shader_material, ...props }) {
         castShadow
         receiveShadow
         // geometry={nodes['Node-Mesh_11'].geometry}
-        position={[0.37, 0.0, 0.27]}
+        position={[0.37, 0.02, 0.27]}
         rotation-x={Math.PI}
         material={shader_material}
       >
