@@ -1,6 +1,6 @@
 import Character from './Character'
-import vertex from '../../shaders/hologram/vertex.glsl'
-import fragment from '../../shaders/hologram/fragment.glsl'
+import vertex from '../../shaders/hologram/vertex.glsl?raw'
+import fragment from '../../shaders/hologram/fragment.glsl?raw'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 import { useControls } from 'leva'
