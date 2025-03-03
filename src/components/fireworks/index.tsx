@@ -3,23 +3,18 @@ import { Canvas } from '@react-three/fiber'
 import { Perf } from 'r3f-perf'
 import { useRef } from 'react'
 import * as THREE from 'three'
-import Fireworks, { type CreateFireWork } from './Fireworks'
+import Fireworks from './Fireworks'
+
+type FireworkRef = {
+  textures: THREE.Texture[]
+  createRandomFirework: () => void
+}
 
 export default function Experience() {
-  const firework_ref = useRef<{
-    textures: THREE.Texture[]
-    createFirework: CreateFireWork
-  }>(null!)
+  const firework_ref = useRef<FireworkRef>(null!)
 
   function handleClick() {
-    firework_ref.current.createFirework(
-      100,
-      new THREE.Vector3(),
-      0.5,
-      firework_ref.current.textures[7],
-      1,
-      new THREE.Color('#0AE448')
-    )
+    firework_ref.current.createRandomFirework()
   }
 
   return (

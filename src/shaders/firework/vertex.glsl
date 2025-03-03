@@ -53,4 +53,9 @@ void main(){
   // We use 'u_resolution.y' cz resizing adjusts the FOV which has a vertical orientation
   gl_PointSize = u_size * a_size * u_resolution.y * size_progress * twinkling_size; 
   gl_PointSize *= 1.0 / - view_position.z;
+
+  // Fix for some windows machines with bug regarding small point sizes
+  if(gl_PointSize < 1.0) {
+    gl_Position = vec4(9999.9);
+  }
 }
