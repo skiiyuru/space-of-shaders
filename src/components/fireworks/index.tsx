@@ -4,6 +4,7 @@ import { Perf } from 'r3f-perf'
 import { useRef } from 'react'
 import * as THREE from 'three'
 import Fireworks from './Fireworks'
+import Sky from './Sky'
 
 type FireworkRef = {
   textures: THREE.Texture[]
@@ -32,6 +33,8 @@ export default function Experience() {
         maxPolarAngle={Math.PI / 1.9}
         makeDefault
       />
+
+      <Sky />
 
       <Fireworks ref={firework_ref} />
     </Canvas>
