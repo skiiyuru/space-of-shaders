@@ -1,6 +1,7 @@
 varying vec2 v_uv;
 
 #define NUM_REPEATS 10.0
+#include ../../includes/minecraft.glsl
 
 float bars(vec2 uv) {
   float repeat_x = mod(uv.x * NUM_REPEATS, 1.0);
@@ -44,11 +45,16 @@ void main() {
   // float strength =  max(abs(v_uv.x - 0.5), abs(v_uv.y - 0.5));
 
   // 7
-  float strength =  max(abs(v_uv.x - 0.5), abs(v_uv.y - 0.5));
-  strength += step(0.2, strength);
+  // float strength =  max(abs(v_uv.x - 0.5), abs(v_uv.y - 0.5));
+  // strength += step(0.2, strength);
 
   // 8
-
+  // float gradient_x = floor(v_uv.x * 10.0) / 10.0;
+  // float gradient_y = floor(v_uv.y * 10.0) / 10.0;
+  // float strength = gradient_x * gradient_y;
+  
+  // 9
+  float strength = minecraft(v_uv);
   
   gl_FragColor = vec4(strength, strength, strength, 1.0);
 }
